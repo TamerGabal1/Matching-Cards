@@ -11,6 +11,7 @@ let scoreHeader = document.getElementById("score");
 let resetButton = document.getElementById("reset");
 for(let i = 0; i < 16; i++){
     let card = document.createElement('img');
+    card.alt = "Card";
     card.src = "https://opengameart.org/sites/default/files/card%20back%20purple.png";
     defaultCardSrcs.push(card.src);
     card.setAttribute('class','card')
@@ -62,6 +63,7 @@ resetButton.onclick = () =>{
                 0,0,0,0,
                 0,0,0,0];
     score = 0; 
+    scoreHeader.innerHTML = "Score: " + score;
     cardsClicked = 0;
     defaultCardSrcs = [];
     allCards.forEach( (card, index) =>{
